@@ -18,11 +18,10 @@ def load_model(file_path):
         st.error(f"Error loading model: {e}")
         return None
 
-nb_model = load_model('nb_model_joblib.pkl')  # Naive Bayes model
-km_model = load_model('km_model_joblib.pkl')  # K-Means clustering model
+nb_model = load_model('nb_model_joblib.pkl') 
+km_model = load_model('km_model_joblib.pkl')
 
-# Load Dataset
-@st.cache
+
 def load_data(file_path):
     try:
         return pd.read_csv(file_path)
